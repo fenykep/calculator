@@ -1,38 +1,138 @@
+:root{
+  --headColor: #8096ec;
+  --note: #fdfb8e;
+  --mainNote: #f9f0aced;;
+  --green: #73e873;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--headColor);
+  color: white;
+  padding: 10px;
+}
+
+.App-header h1{
+  margin: 0;
+  text-align: left;
+}
+
+.App main{
+  margin: 0;
+
+  padding-right: 25vw;
+}
+
+.result{
+  display: inline;
+  margin: 0;
+
+  height: 3rem;
+
+  font-size: 2.3rem;
+}
+
+.saveVar{
+  display: inline-block;
+  margin: 0;
+  margin-left: 20px;
+
+  font-size: 2.3rem;
+  
+  height: 2.7rem;
+  width: 2.7rem;
+
+  border-radius: 50%;
+  color: white;
+
+  background-color: var(--green);
+
+  box-shadow: 0px 0px 5px #444;
+  transition: all 0.1s;
+  cursor: pointer;
+
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.saveVar:hover{
+  box-shadow: 0px 0px 2px grey;
+}
+
+.saveVar:active{
+  color: #f0ffd7;
+  box-shadow: inset 0px 0px 5px #f0ffd7;
+}
+
+#equation{ 
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.InputsCont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.InputCol{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.InputCol input{
+  padding: 5px 2px 5px 15px;
+  margin-bottom: 10px;
+  
+  font-size: 20px;
+  border-radius: 10px;
+
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sidebar{
+  position: absolute;
+  right: 0;
+  top: 59px;
+
+  width: 25vw;
+  height: calc(100vh - 59px);
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.Sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.Sidebar ul{
+  list-style: none;
+  margin: 0;
+}
+
+.Sidebar li{
+  padding: 6px 0;
+  background: var(--note);
+  font-size: 1.5rem;
+}
+
+.Sidebar li:nth-child(odd) {
+  background: var(--mainNote);
+}
+
+.Sidebar strong{
+  cursor: pointer;
+}
+
+
