@@ -1,5 +1,5 @@
 A simple calculator designed for solving for variables with alternative equations.
-Single page app made with React.
+Single page app made with [React](https://reactjs.org).
 
 ## Available Scripts
 
